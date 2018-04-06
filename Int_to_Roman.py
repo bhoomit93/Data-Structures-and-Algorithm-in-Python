@@ -25,10 +25,8 @@ class Solution:
 
 
 def main():
-    nums = [1, -3, 0, -5, 3, 5, 6, 7]
-    n = len(nums)
 
-    test = 3100
+    test = 752
 
     S = Solution()
     print(S.intToRoman(test))
