@@ -13,6 +13,7 @@ class Node:
 # Linked_List class
 class Linked_List:
 
+    # Assign the head to null
     def __init__(self):
         self.head = None
 
@@ -85,6 +86,32 @@ class Linked_List:
 
         temp=None
 
+
+    #this function will return the count of the nodes presend in linkedlist
+    def getCount(self):
+        temp = self.head
+        count = 0
+
+        while temp:
+            count +=1
+            temp=temp.next
+
+        return count
+
+
+    #this function deletes the list
+    def deleteList(self):
+
+        current = self.head
+
+        while current:
+            nex_node = current.next
+            print("Node deleted")
+            del current.data
+            current = nex_node
+
+
+
 #Code Execution
 
 if __name__ == "__main__":
@@ -111,5 +138,10 @@ if __name__ == "__main__":
     llist.deleteNode(9)
 #5->1->2->4->3
     llist.printList()
+    print("The count is ",llist.getCount())
+
+    llist.deleteList()
+
+
 
 
