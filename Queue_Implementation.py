@@ -1,0 +1,39 @@
+"""
+
+@author: Bhoomit Patel
+Data: 04/2018
+
+"""
+
+class Queue():
+
+    #Constructor creats an empty list
+    def __init__(self):
+        self.queue = []
+
+    #to add element to the queue
+    def enqueue(self,data):
+        self.queue.insert(0,data)
+
+    #to remove the element from the queue
+    def dequeue(self):
+        self.queue.pop()
+
+    #This function prints the queue
+    def printQueue(self):
+        return self.queue
+
+    #This function returns the size of the queue
+    def size(self):
+        if len(self.queue) == 0:
+            print("The Queue is Empty!")
+            return 0
+        return len(self.queue)
+
+    #This function return the front element
+    def qFront(self):
+        print("Front element is",self.queue[0])
+
+    #This function returns the rear element
+    def qRear(self):
+        print("Rear element is",self.queue[len(self.queue)-1])
