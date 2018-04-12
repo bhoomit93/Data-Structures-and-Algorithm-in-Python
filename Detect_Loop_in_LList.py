@@ -6,6 +6,7 @@ class features(Linked_List):
         slow_pointer = self.head
         fast_pointer = self.head
 
+        #We check if the slow pointer, fast pointer and fast_pointer mext is not null
         while(slow_pointer and fast_pointer and fast_pointer.next):
             print(slow_pointer.data,fast_pointer.data,fast_pointer.next.data)
             slow_pointer= slow_pointer.next
