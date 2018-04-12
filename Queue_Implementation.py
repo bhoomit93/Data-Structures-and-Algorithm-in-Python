@@ -21,14 +21,14 @@ class Queue():
 
     #This function prints the queue
     def printQueue(self):
-        return self.queue
+        print("rear ->",self.queue,"-> front")
 
     #This function returns the size of the queue
     def size(self):
         if len(self.queue) == 0:
+
             print("The Queue is Empty!")
-            return 0
-        return len(self.queue)
+        print(len(self.queue))
 
     #This function return the front element
     def qFront(self):
@@ -37,3 +37,26 @@ class Queue():
     #This function returns the rear element
     def qRear(self):
         print("Rear element is",self.queue[len(self.queue)-1])
+
+#Driver program to check functions
+
+q=Queue()
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+q.enqueue(4)
+q.enqueue(5)
+q.printQueue()
+
+q.size()
+
+q.dequeue()
+q.printQueue()
+
+"""
+
+rear -> [5, 4, 3, 2, 1] -> front
+5
+rear -> [5, 4, 3, 2] -> front
+
+"""
