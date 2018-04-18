@@ -20,11 +20,11 @@ class Linked_List:
     #prints the list
     def printList(self):
         temp = self.head
-        print("Head")
+        print("Head ->",end="")
         while temp:
-            print(temp.data)
+            print(temp.data,"->",end="")
             temp = temp.next
-        print("Tail")
+        print("Tail\n")
 
     #add the node in the front of the linked list
     def push(self,new_data):
